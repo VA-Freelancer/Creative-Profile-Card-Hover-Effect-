@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/glitch.css">
 </head>
 <body>
 	<section class="compaign-wrapper">
@@ -17,12 +18,14 @@
 				<div class="col-lg-4">
 					<div class="wrapper bg-1">
 						<div class="profile">
-							<img src="img/1.jpg" class="thumbnail" alt="">
+							<div class="thumbnail-wrapper">
+								<img src="img/4.jpg" class="thumbnail" alt="">
+							</div>
 							<div class="check">
 								<i class="fa fa-check"></i>
 							</div>
 							<h3 class="name">Andrey V</h3>
-							<p class="title">Вэб-дизайнер/верстальщик сайтов</p>
+							<div class="glitch-wrapper"><p class="title glitch" data-text='Сайт под ключ'>Сайт под ключ</p></div>
 							<p class="description">
 								Создание от дизайна до готового сайта.
 							</p>
@@ -56,14 +59,16 @@
 				<div class="col-lg-4">
 					<div class="wrapper bg-2">
 						<div class="profile">
-							<img src="img/2.jpg" class="thumbnail" alt="">
+							<div class="thumbnail-wrapper">
+								<img src="img/4.jpg" class="thumbnail" alt="">
+							</div>
 							<div class="check">
 								<i class="fa fa-check"></i>
 							</div>
 							<h3 class="name">Andrey V</h3>
-							<p class="title">Верстальщик сайтов</p>
-							<p class="description">
-								Создам сайт из готового дизайна.
+							<div class="glitch-wrapper"><p class="title glitch" data-text='Верстальщик сайтов'>Верстальщик сайтов</p></div>
+							<p class="description ">
+								Вёрстка по готовому дизайну.
 							</p>
 							<button type="button" class="btn">Заказать</button>
 						</div>
@@ -96,14 +101,18 @@
 				<div class="col-lg-4">
 					<div class="wrapper bg-3">
 						<div class="profile">
-							<img src="img/3.jpg" class="thumbnail" alt="">
+							<div class="thumbnail-wrapper">
+								<img src="img/4.jpg" class="thumbnail" alt="">
+							</div>
 							<div class="check">
 								<i class="fa fa-check"></i>
 							</div>
 							<h3 class="name">Andrey V</h3>
-							<p class="title">Веб-дизайнер</p>
+							<div class="glitch-wrapper">
+								<p class="title glitch" data-text='Веб-дизайнер'>Веб-дизайнер</p>
+							</div>
 							<p class="description">
-								Создам дизайн сайта для вас.
+								эксклюзивный дизайн сайта.
 							</p>
 							<button type="button" class="btn">Заказать</button>
 						</div>
@@ -137,5 +146,20 @@
 			</div>
 		</div>
 	</section>
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+	<script async defer>
+		$('.profile').hover(
+       function(){ $(this).children('.description').addClass('text-typing') },
+       function() { $(this).children('.description').removeClass('text-typing');
+       });
+		$('.profile').hover(
+       function(){ $(this).children('.glitch-wrapper').children().removeClass('glitch') },
+       function(){ $(this).children('.glitch-wrapper').children().addClass('glitch') }
+       );
+	</script>
+
 </body>
 </html>
